@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
+  <title>Каталог товаров – Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="contacts.html">Контакты</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="order.html">Заявка</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Каталог</span>
+    </nav>
+
+    <section class="section">
+      <h1>Каталог товаров</h1>
+      <p>
+        На этой странице представлен учебный каталог товаров. 
+        Выберите интересующий вас товар, чтобы узнать подробности или оформить заявку.
+      </p>
+    </section>
+
+    <section class="catalog-layout">
+      <aside class="catalog-filters">
+        <h2>Фильтры</h2>
+
+        <form class="filters-form" action="#" method="get">
+          <fieldset>
+            <legend>Категория</legend>
+            <label>
+              <input type="checkbox" name="category" value="all">
+              Все товары
+            </label>
+            <label>
+              <input type="checkbox" name="category" value="popular">
+              Популярные
+            </label>
+            <label>
+              <input type="checkbox" name="category" value="new">
+              Новинки
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Цена</legend>
+            <label for="price-from">От</label>
+            <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+
+            <label for="price-to">До</label>
+            <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+          </fieldset>
+
+          <button class="button button--primary" type="submit">Применить</button>
+        </form>
+      </aside>
+
+      <section class="catalog-products">
+        <h2>Список товаров</h2>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <img 
+              src="images/creatine.png" 
+              srcset="images/creatine.png 480w, 
+                      images/creatine.png 640w, 
+                      images/creatine.png 960w" 
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" 
+              alt="Креатин моногидрат" 
+              width="640" 
+              height="480" 
+              loading="lazy"
+            >
+            <h3 class="product-card__title">Креатин</h3>
+            <p class="product-card__description">
+              Чистый креатин моногидрат для повышения силы и выносливости. Помогает увеличить мышечную массу и ускорить восстановление после интенсивных тренировок.
+            </p>
+            <p class="product-card__price">Цена: 1558 руб.</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary" href="product1.html">Подробнее</a>
+              <button class="button button--primary product-card__button" type="button" data-product="Креатин">
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <!-- Товар 2: Протеин (Хит) -->
+          <article class="product-card">
+            <img 
+              src="images/protein.png" 
+              srcset="images/protein.png 480w, 
+                      images/protein.png 640w, 
+                      images/protein.png 960w" 
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" 
+              alt="Сывороточный протеин" 
+              width="640" 
+              height="480" 
+              loading="lazy"
+            >
+            <h3 class="product-card__title">Протеин</h3>
+            <p class="product-card__description">
+              Высококачественный сывороточный протеин для роста и восстановления мышц. Обеспечивает организм необходимым белком и легко усваивается после тренировки.
+            </p>
+            <p class="product-card__price">Цена: 2346 руб.</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary" href="product2.html">Подробнее</a>
+              <button class="button button--primary product-card__button" type="button" data-product="Протеин">
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card product-card--discount">
+            <img 
+              src="images/preworkout.png" 
+              srcset="images/preworkout.png 480w, 
+                      images/preworkout.png 640w, 
+                      images/preworkout.png 960w" 
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" 
+              alt="Предтренировочный комплекс" 
+              width="640" 
+              height="480" 
+              loading="lazy"
+            >
+            <span class="product-card__badge">Скидка</span>
+            <h3 class="product-card__title">Предтрен</h3>
+            <p class="product-card__description">
+              Мощный энергетический комплекс для максимальной отдачи на тренировке. Повышает концентрацию, дает прилив сил и отодвигает момент усталости.
+            </p>
+            <p class="product-card__price"><s>1100 руб.</s> 1000 руб.</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary" href="product3.html">Подробнее</a>
+              <button class="button button--primary product-card__button" type="button" data-product="Предтрен">
+                Заказать
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img 
+              src="images/BCAA.png" 
+              srcset="images/BCAA.png 480w, 
+                      images/BCAA.png 640w, 
+                      images/BCAA.png 960w" 
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw" 
+              alt="Аминокислоты BCAA" 
+              width="640" 
+              height="480" 
+              loading="lazy"
+            >
+            <h3 class="product-card__title">BCAA</h3>
+            <p class="product-card__description">
+              Аминокислоты BCAA 2:1:1 со вкусом "Зеленое яблоко". Ускоряют восстановление мышц и предотвращают катаболизм.
+            </p>
+            <p class="product-card__price">Цена: 692 руб.</p>
+            <div class="product-card__actions">
+              <a class="button button--secondary" href="product4.html">Подробнее</a>
+              <button class="button button--primary product-card__button" type="button" data-product="BCAA">
+                Заказать
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" id="to-top" aria-label="Наверх">↑</button>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+
+.vscode/
+.cursor/
+
+*.log
+
+*.tmp
+*.temp
+
+.env
+.env.*
