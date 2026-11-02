@@ -80,3 +80,22 @@ if (toTopButton) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteNav = document.getElementById('site-nav'); // Теперь он найдет его по id
+
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', () => {
+      // Переключаем класс
+      const isOpen = siteNav.classList.toggle('is-open');
+      
+      // Меняем атрибут доступности
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      
+      // Меняем подпись
+      menuToggle.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    });
+  }
+});

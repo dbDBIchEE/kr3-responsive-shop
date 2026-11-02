@@ -10,14 +10,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animejs.css">
+  <script src="https://cdn.jsdelivr.net/npm/animejs@4.3.6/dist/bundles/anime.umd.min.js"></script>
+  <script src="js/anime.js" defer></script>
+  
   <script src="js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к основному содержимому</a>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="site-header__logo" href="index.html">ShopProject</a>
-      <nav class="site-nav" aria-label="Основная навигация">
+      
+      <div class="logo-box">
+        <div>
+          <svg 
+            class="logo logo-animated"
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 100 40" 
+            width="200" 
+            height="80"
+            fill="currentColor"
+            aria-label="Гантель"
+          >
+            <rect x="5"  y="2"  width="12" height="36" rx="3" />
+            <rect x="20" y="8"  width="12" height="24" rx="3" />
+
+            <rect x="32" y="16" width="36" height="8" rx="2" />
+          
+            <rect x="68" y="8"  width="12" height="24" rx="3" />
+            <rect x="83" y="2"  width="12" height="36" rx="3" />
+          </svg>
+        </div>
+        <div>
+          <button class="rotate-btn">0</button>
+        </div>
+      </div>
+      
+      <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item">
             <a class="site-nav__link site-nav__link--active glass" href="index.html" aria-current="page">Главная</a>
@@ -42,12 +77,14 @@
           </li>
         </ul>
       </nav>
+
+      <div class="square"><span>Drag Me!</span></div>
     </div>
   </header>
 
   <main id="main">
     <section class="hero">
-      <h1>Интернет-магазин спортивного питания</h1>
+      <h1>Интернет магазин спротивного питания</h1>
       <p>
         Это стартовая страница учебного frontend-проекта.
         В дальнейшем на её основе будет разработан многостраничный сайт
